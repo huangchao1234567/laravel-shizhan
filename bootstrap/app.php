@@ -15,7 +15,7 @@ require_once __DIR__ . '/helpers.php';
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
-
+$app->register(Overtrue\LaravelLang\TranslationServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
