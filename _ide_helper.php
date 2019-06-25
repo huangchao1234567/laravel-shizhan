@@ -2114,7 +2114,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Determine if the current user is authenticated.
          *
-         * @return \App\User 
+         * @return \App\Models\User
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
