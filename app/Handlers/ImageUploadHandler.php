@@ -31,9 +31,8 @@ class ImageUploadHandler
 
         // 将图片移动到我们的目标存储路径中
         $file->move($upload_path, $filename);
-
         return [
-            'path' => config('app.url') . "/$folder_name/$filename"
+            'path' => /*config('app.url') .*/ "/$folder_name/$filename"
         ];
     }
 }
