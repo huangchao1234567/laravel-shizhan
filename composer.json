@@ -10,6 +10,7 @@
         "encore/laravel-admin": "^1.7",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "~6.0",
+        "hieu-le/active": "~3.5",
         "intervention/image": "^2.5",
         "james.xue/laravel-admin-sortable": "^1.0",
         "laravel/framework": "5.8.*",
