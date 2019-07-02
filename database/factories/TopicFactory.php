@@ -1,0 +1,31 @@
+<?php
+
+use Faker\Generator as Faker;
+use App\Models\User;
+use Illuminate\Support\Str;
+
+$factory->define(App\Models\Topic::class, function (Faker $faker) {
+    $date_time = $faker->date . ' ' . $faker->time;
+    $sentence = $faker->sentence();
+
+    // 随机取一个月以内的时间
+    $updated_at = $faker->dateTimeThisMonth();
+
+    // 传参为生成最大时间不超过，因为创建时间需永远比更改时间要早
+    $created_at = $faker->dateTimeThisMonth($updated_at);
+    return [
+        /*'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'remember_token' => Str::random(10),
+        'email_verified_at' => now(),
+        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+        'introduction' => $faker->sentence(),
+        'created_at' => $date_time,
+        'updated_at' => $date_time,*/
+        'title' => $sentence,
+        'body' => $faker->text(),
+        'excerpt' => $sentence,
+        'created_at' => $created_at,
+        'updated_at' => $updated_at,
+    ];
+});
